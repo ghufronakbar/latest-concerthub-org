@@ -176,6 +176,7 @@ export function FormEventAdd() {
                     boxSize="400"
                     objectFit="cover"
                     src={selectedEventImage}
+                    alt=""
                   />
                 ) : (
                   <Alert status="warning">
@@ -208,6 +209,7 @@ export function FormEventAdd() {
                     boxSize="400"
                     objectFit="cover"
                     src={selectedSitePlanImage}
+                    alt=""
                   />
                 ) : (
                   <Alert status="warning">

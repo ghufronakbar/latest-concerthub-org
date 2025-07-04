@@ -69,7 +69,7 @@ export function TableOrders() {
       return (
         <Alert status="warning">
           <AlertIcon />
-          There's no data event
+          There&apos;s no data event
         </Alert>
       );
     }

@@ -117,7 +117,7 @@ export function FormEventEdit() {
           <ModalBody>
             <Alert my={2} status="info">
               <AlertIcon />
-              Amount tickets can't be less than sold tickets
+              Amount tickets can&quot;t be less than sold tickets
             </Alert>
             <NumberInput value={amount} min={sold}>
               <NumberInputField onChange={(e) => setAmount(e.target.value)} />
@@ -443,6 +443,7 @@ export function FormEventEdit() {
                         boxSize="400"
                         objectFit="cover"
                         src={selectedEventImage}
+                        alt=""
                       />
                     ) : (
                       <Image
@@ -479,6 +480,7 @@ export function FormEventEdit() {
                         boxSize="400"
                         objectFit="cover"
                         src={selectedSitePlanImage}
+                        alt=""
                       />
                     ) : (
                       event.site_plan_image && (

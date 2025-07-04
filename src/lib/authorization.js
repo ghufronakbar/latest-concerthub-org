@@ -6,7 +6,7 @@ import { useToast } from "@chakra-ui/react";
 export const AuthContext = createContext();
 
 export function withAuth(Component) {
-  return (props) => {
+  const WithAuthComponent = (props) => {
     const router = useRouter();
     const [userData, setUserData] = useState(null);
     const toast = useToast()
@@ -37,7 +37,7 @@ export function withAuth(Component) {
           router.push("/admin/login");
         }
       }
-    }, [router]);
+    }, [router, toast]);
 
     return (
       <AuthContext.Provider value={userData}>
@@ -45,5 +45,9 @@ export function withAuth(Component) {
       </AuthContext.Provider>
     );
   };
+
+  WithAuthComponent.displayName = `withAuth(${Component.displayName || Component.name || "Component"})`;
+
+  return WithAuthComponent;
 }
 
